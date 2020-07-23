@@ -1,41 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa" />
+  </head>
 
-  <meta name="theme-color" content="#fafafa">
-</head>
+  <body>
+    <header class="site-header">
+      <div class="hero">
+        <div class="hero__content">
+          <nav class="hero__social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </nav>
+          <div class="hero__info">
+            <p class="hero__info__date">
+              <i class="fas fa-calendar-alt"></i> 10-12 Dic
+            </p>
+            <p class="hero__info__city">
+              <i class="fas fa-map-marker-alt"></i> Guadalajara, MX
+            </p>
+            <h1 class="hero__info__tittle">GdlWebCamp</h1>
+            <p class="hero__info__slogan">
+              La mejor conferencia de <span>diseño web</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Hero-->
+      <div class="menu">
+        <div class="menu__logo">
+          <a href="index.html"><img src="img/logo.svg" alt="logo" /></a>
+        </div>
+        <div class="menu__bars"><i class="fas fa-bars"></i></div>
+        <nav class="menu__links">
+          <a href="conferencias.html">Conferencias</a>
+          <a href="calendario.html">Calendario</a>
+          <a href="invitados.html">Invitados</a>
+          <a href="reservaciones.html">Reservaciones</a>
+        </nav>
+      </div>
+      <!--Menu-->
+    </header>
+    <!--Header-->
+    <main class="container">
+      <h2 class="text-center">La mejor conferencia de diseño web en español</h2>
+      <div class="tittle-decorator">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <p class="text-center">
+        Proin semper nibh at ligula rhoncus, interdum tincidunt lacus tempus.
+        Curabitur pretium ante ac gravida auctor. Sed sed mauris lacus. Donec
+        ullamcorper metus interdum laoreet rutrum. Proin venenatis aliquet
+        scelerisque. Proin vel lectus augue. Mauris eget felis id leo fringilla
+        ornare. Suspendisse potenti.
+      </p>
+    </main><!--Main-->
+    <section>
+      <div class="program">
+        <div class="program__video">
+          <video class="program__video" autoplay loop poster="img/bg-talleres.jpg">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
+            <source src="video/video.ogv" type="video/ogv">
+          </video>
+        </div>
+        <div class="program__content">
+          <h2 class="text-center">Progama del evento</h2>
+          <div class="tittle-decorator">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <nav class="program__tabs">
+            <a href="#talleres"><i class="fas fa-code"></i> Talleres</a>
+            <a href="#conferencias"><i class="fas fa-comment"></i> Conferencias</a>
+            <a href="#seminarios"><i class="fas fa-university"></i> Seminarios</a>
+          </nav><!--Tabs-->
+          <div class="program__tabs__content">
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>HTML5, CSS3 y JavaScript</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 14:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 10 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div>
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>Responsive Web Design</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 15:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 11 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div> 
+            <a href="conferencias.html" class="btn btn-primary">Ver todos</a>            
+          </div><!--Events-->
+        </div>
+      </div>
+    </section>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-<body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
 </html>
