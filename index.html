@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es_MX">
   <head>
     <meta charset="utf-8" />
     <title></title>
@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
 
@@ -61,7 +62,7 @@
           <a href="conferencias.html">Conferencias</a>
           <a href="calendario.html">Calendario</a>
           <a href="invitados.html">Invitados</a>
-          <a href="reservaciones.html">Reservaciones</a>
+          <a href="registro.html">Reservaciones</a>
         </nav>
       </div>
       <!--Menu-->
@@ -80,7 +81,7 @@
         ornare. Suspendisse potenti.
       </p>
     </main><!--Main-->
-    <section>
+    <section class="section">
       <div class="program">
         <div class="program__video">
           <video class="program__video" autoplay="true" muted loop poster="img/bg-talleres.jpg">
@@ -99,7 +100,7 @@
             <a href="#conferencias"><i class="fas fa-comment"></i> Conferencias</a>
             <a href="#seminarios"><i class="fas fa-university"></i> Seminarios</a>
           </nav><!--Tabs-->
-          <div class="program__tabs__content">
+          <div id="talleres" class="program__tabs__content hide">
             <div class="program__event">
               <a href="conferencia.html">
                 <h3>HTML5, CSS3 y JavaScript</h3>
@@ -118,11 +119,282 @@
             </div> 
             <a href="conferencias.html" class="btn btn-primary">Ver todos</a>            
           </div><!--Events-->
+          <div  id="conferencias" class="program__tabs__content hide">
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>Cómo ser Freelancer</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 10:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 10 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div>
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>Tecnologías del futuro</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 15:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 11 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div> 
+            <a href="conferencias.html" class="btn btn-primary">Ver todos</a>            
+          </div><!--Events-->
+          <div id="seminarios" class="program__tabs__content hide">
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>Diseño UX/UI para móviles</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 17:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 10 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div>
+            <div class="program__event">
+              <a href="conferencia.html">
+                <h3>Aprende a programar en una mañana</h3>
+              </a>
+              <p><i class="far fa-clock"></i> 10:00 hrs</p>
+              <p><i class="far fa-calendar"></i> 11 de Dic</p>
+              <p><i class="fas fa-user"></i></i> Jonathan Ruiz</p>
+            </div> 
+            <a href="conferencias.html" class="btn btn-primary">Ver todos</a>            
+          </div><!--Events-->
         </div>
       </div>
     </section>
+    <section class="container section">
+      <h2 class="text-center">Nuestros invitados</h2>
+      <div class="tittle-decorator">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <ul class="guest__container">
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado1.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Rafael Bautista</h3>
+          </a>
+        </li>
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado2.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Sarahi Herrera</h3>
+          </a>
+        </li>
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado3.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Gregorio Sánchez</h3>
+          </a>
+        </li>
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado4.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Susana Rivera</h3>
+          </a>
+        </li>
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado5.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Harold García</h3>
+          </a>
+        </li>
+        <li class="guest__card">
+          <div class="guest__card__img">
+            <img src="img/invitado6.jpg" alt="invitado">
+          </div>
+          <a href="invitado.html">
+            <h3>Susan Sánchez</h3>
+          </a>
+        </li>
+      </ul>
+    </section><!--Guest-->
+    <section class="section">
+      <div class="counters">
+        <div class="container">          
+          <div class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Invitados</p>
+          </div>
+          <div class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Talleres</p>
+          </div>
+          <div class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Días</p>
+          </div>
+          <div class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Conferencias</p>
+          </div>
+        </div>
+      </div>
+    </section><!--Counters-->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">Precios</h2>
+        <div class="tittle-decorator">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <ul class="prices">
+          <li class="price__card">
+            <h4>Un día</h4>
+            <p><span>$30</span></p>
+            <p>Bocadillos gratis</p>
+            <p>Todas las conferencias</p>
+            <p>Todos los talleres</p>
+            <a href="comprar.html" class="btn btn-secondary">Comprar</a>
+          </li>
+          <li class="price__card">
+            <h4>Todos los días</h4>
+            <p><span>$50</span></p>
+            <p>Bocadillos gratis</p>
+            <p>Todas las conferencias</p>
+            <p>Todos los talleres</p>
+            <a href="comprar.html" class="btn btn-primary">Comprar</a>
+          </li>
+          <li class="price__card">
+            <h4>Dos días</h4>
+            <p><span>$45</span></p>
+            <p>Bocadillos gratis</p>
+            <p>Todas las conferencias</p>
+            <p>Todos los talleres</p>
+            <a href="comprar.html" class="btn btn-secondary">Comprar</a>
+          </li>
+        </ul>
+      </div>
+    </section><!--Prices-->
+    
+    <div class="map" id="map"></div>
+    <!--Map-->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">Testimoniales</h2>
+        <div class="tittle-decorator">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <ul class="testimonials">
+          <li class="testimonial">
+            <blockquote>
+              <p class="testimonial__cite">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Laboriosam quis ab ipsum veritatis enim totam.</p>
+              <div class="testimonial__info">
+                <img src="img/testimonial.jpg" alt="imagen testimonial">
+                <p><span>Oswaldo Aponte Escobedo</span></p>
+                <p>Diseñador en @prisma</p>          
+              </div>
+            </blockquote>
+          </li>
+          <li class="testimonial">
+            <blockquote>
+              <p class="testimonial__cite">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Laboriosam quis ab ipsum veritatis enim totam.</p>
+              <div class="testimonial__info">
+                <img src="img/testimonial.jpg" alt="imagen testimonial">
+                <p><span>Oswaldo Aponte Escobedo</span></p>
+                <p>Diseñador en @prisma</p>          
+              </div>
+            </blockquote>
+          </li>
+          <li class="testimonial">
+            <blockquote>
+              <p class="testimonial__cite">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Laboriosam quis ab ipsum veritatis enim totam.</p>
+              <div class="testimonial__info">
+                <img src="img/testimonial.jpg" alt="imagen testimonial">
+                <p><span>Oswaldo Aponte Escobedo</span></p>
+                <p>Diseñador en @prisma</p>          
+              </div>
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+    </section><!--testimonials-->
+    <section class="section">
+      <div class="newsletter">
+        <div class="container">
+          <p>Registrate al newsletter</p>
+          <div class="newsletter__logo">
+            <img src="img/logo.svg" alt="logo">
+          </div>
+          <a href="registro.html" class="btn btn-trans">Registro</a>
+        </div>
+      </div>
+    </section><!--Newsletter-->
+    <section class="section">
+      <div class="countdown">
+        <h2 class="text-center">Faltan</h2>
+        <div class="tittle-decorator">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <div id="cuenta-regresiva" class="container">          
+          <div id="dias" class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Días</p>
+          </div>
+          <div id="horas" class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Horas</p>
+          </div>
+          <div id="minutos" class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Minutos</p>
+          </div>
+          <div id="segundos" class="counter">
+            <p class="counter__number"></p>
+            <p class="counter__name">Segundos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer__widgets">
+          <div class="footer__widget">
+            <h3>Sobre <span>GdlWebCamp</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur 
+              adipisicing elit. Non sequi accusamus incidunt a optio!
+               Dolorum odio nemo accusamus libero repellendus?
+            </p>
+          </div>
+          <div class="footer__widget">
+            <h3>Últimos <span>Tweets</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur 
+              adipisicing elit. Non sequi accusamus incidunt a optio!
+               Dolorum odio nemo accusamus libero repellendus?
+            </p>
+          </div>
+          <div class="footer__widget">
+            <h3>Redes <span>Sociales</span></h3>
+            <nav class="hero__social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <p class="text-center footer__rights">
+        Todos los derechos reservados Jonathan Ruiz 2016
+      </p>
+    </footer>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
