@@ -35,6 +35,7 @@
     //Extras
     var camisas = document.getElementById("camisa_evento");
     var etiquetas = document.getElementById("etiquetas");
+    botonRegistro.disabled = true;
 
     calcular.addEventListener("click", calcularMontos);
     pase_dia.addEventListener("change", mostrarDias);
@@ -84,6 +85,9 @@
         }
         suma.style.display = "block";
         suma.innerHTML = "$ " + totalPagar.toFixed(2);
+
+        botonRegistro.disabled = false;
+        document.getElementById('total_pedido').value = totalPagar.toFixed(2);
       }
     }
 
@@ -136,6 +140,13 @@ $(function() {
   //Lettering
   $('.hero__info__tittle').lettering();
 
+
+  //Link activo 
+  $('body.conferencia .menu__links a:contains("Conferencias")').addClass('activo');
+  $('body.calendario .menu__links a:contains("Calendario")').addClass('activo');
+  $('body.invitados .menu__links a:contains("Invitados")').addClass('activo');
+  $('body.registro .menu__links a:contains("Reservaciones")').addClass('activo');
+
   //Menu fijo
   var windowHeight = $(window).height();
   var navHeight = $('.menu').innerHeight();
@@ -168,4 +179,9 @@ $(function() {
     $('#minutos .counter__number').html(event.strftime('%M'));
     $('#segundos .counter__number').html(event.strftime('%S'));
   });
+
+  //Colorbox
+
+  $('.invitado-info').colorbox({inline:true, width:"50%"});
+  $('#btn_newsletter').colorbox({inline:true, width:"50%"});
 });
