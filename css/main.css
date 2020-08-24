@@ -170,7 +170,7 @@ ul {
  */
 /*Hero*/
 .hero {
-  background-image: url(/img/encabezado.jpg);
+  background-image: url(../img/encabezado.jpg);
   background-position: top center;
   background-size: cover;
   height: 100vh;
@@ -318,7 +318,7 @@ ul {
   text-align: center;
   text-transform: uppercase;
 }
-.menu__links a:hover {
+.menu__links a:hover , .menu__links a.activo{
   border: 1px solid #fe4918;
   color: #fe4918;
   font-weight: 700;
@@ -376,7 +376,7 @@ ul {
  */
  /**Program**/
  .program {
-   background-image: url(/img/bg-talleres.jpg);
+   background-image: url(../img/bg-talleres.jpg);
    background-position: center center;
    background-size: cover;
    display: flex;
@@ -504,7 +504,7 @@ ul {
 }
 /**Counter**/
 .counters {
-  background: url(/img/bg-resumen.jpg) center center;
+  background: url(../img/bg-resumen.jpg) center center;
   background-size: cover;
 }
 .counters .container {
@@ -641,7 +641,7 @@ blockquote {
 }
 /**Newsletter*/
 .newsletter {
-  background-image: url(/img/bg-newsletter.jpg);
+  background-image: url(../img/bg-newsletter.jpg);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -652,6 +652,9 @@ blockquote {
 .newsletter p {
   color: white;
   font-size: 22px;
+}
+#btn_newsletter{
+  padding: .4rem 1.5rem;
 }
 /**Newsletter*/
 .countdown .container {
@@ -837,6 +840,73 @@ div.resumen input {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+/**Calendario***/
+.calendario__container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.dia {
+ flex: 0 0 100%;
+ background-color: #fe4918;
+ color: white;
+ text-align: center;
+ padding: 5px 0;
+ margin-top: 1rem;
+}
+.eventos {
+  display: flex;
+  flex-wrap: wrap;  
+}
+.evento {
+  flex: 0 0 33.3%;
+  padding: 1rem;
+  border: 1px solid #999;
+  transition:  all .3s ease;
+}
+.evento:hover{
+  background-color: #e1e1e1;
+  -webkit-transform: scale(1.1);
+  border: none;
+}
+.evento p {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.evento p:first-of-type {
+  color: #fe4918;
+  padding-bottom: 1rem;
+}
+.evento p i{
+  color: #fe4918;
+}
+/**Colorbox**/
+.cboxElement {
+  padding: 30px;
+  text-align: center;
+}
+.cboxElement img {
+  margin: 1rem auto;
+}
+
+.resultado {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.correcto {
+  background-color: rgb(2, 173, 2);
+}
+.error {
+  background-color: red;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
