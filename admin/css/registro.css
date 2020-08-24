@@ -1,0 +1,158 @@
+.prices {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .price__card {
+    flex: 0 0 90%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid lightgray;
+  }
+  .price__card:hover {
+    border: 1px solid #fe4918;
+  }
+  .price__card h4 {
+    color: #fe4918;
+  }
+  .price__card p span {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  @media (min-width: 768px) {
+    .price__card {
+      flex: 0 0 calc(33.3% - .5rem);
+    }
+  }
+  @media (min-width: 1200px) {
+    .price__card {
+      flex: 0 0 calc(33.3% - 3rem);
+    }
+  }
+li.price__card {
+    list-style: none;
+ }
+ form.registro h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    color: #fe4918;
+  }
+  form.registro label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  h4{
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fe4918;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  div.caja {
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    margin: 10px;
+    padding: 10px;
+  }
+  div.campo {
+    padding: 20px;
+  }
+  @media (min-width: 768px) {
+    div.campo {
+      float: left;
+      width: 33.3%;
+    }
+  }
+  .orden input {
+    clear: both;
+    width: 50px;
+    margin: 10px auto 0 auto;
+    display: block;
+  }
+  .contenido-dia {
+    padding: 20px;
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .contenido-dia > div {
+      float: left;
+      width: 33.3%;
+    }
+  }
+  .contenido-dia p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .contenido-dia > div p{
+    text-align: left
+  }
+  .contenido-dia > div label{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .contenido-dia > div input{
+    margin-right: 10px;
+  }
+  .contenido-dia > div label time{
+    color: #fe4918;
+    font-weight: bold;
+  }
+  /***Resumen registro***/
+  .resumen p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  .resumen .caja {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.resumen div.extras {
+    flex: 0 0 100%;
+    padding: 30px;
+  }
+  div.extras div.orden {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  div.extras div.orden input {
+    margin: 10px 0 0 0 ;
+  }
+  div.resumen div.total {
+    flex: 0 0 100%;
+    padding: 30px;
+  }
+  div.resumen input {
+    display: block;
+    margin: 10px auto;
+  }
+  #lista-productos, #suma-total {
+    background-color: #e1e1e1;
+    padding: 10px;
+    display: none;
+  }
+  #suma-total {
+    text-align: center;
+    font-size: 24px;
+    color: #fe4918;
+  }
+  @media (min-width: 768px) {
+    .resumen .caja {
+      display: block;
+    }
+    div.resumen div.extras {
+      float: left;
+      width: 50%;
+      padding: 30px;
+    }
+    div.resumen div.total {
+      float: right;
+      width: 50%;
+      padding: 30px;
+    }
+  }

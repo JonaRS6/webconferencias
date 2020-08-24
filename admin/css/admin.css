@@ -1,0 +1,11 @@
+.user-panel {
+    height: 60px;
+}
+
+.swal2-popup {
+    font-size: 1.4rem;
+}
+
+.login-page .main-footer {
+    display: none;
+}
