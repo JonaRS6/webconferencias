@@ -14,10 +14,10 @@
   }
 
   $response = proxyRequest();
-  print_r($response);
+  print_r($response);   
 ?>
 <?php
-    $conn = new mysqli('35.222.4.81', 'root', '', 'gdlwebcamp', '3306');
+    $conn = new mysqli('localhost', 'root', '', 'gdlwebcamp', '3306');
 
     if ($conn->connect_error) {
         echo $error -> $conn->connect_error;
