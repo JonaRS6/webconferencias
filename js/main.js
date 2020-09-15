@@ -166,12 +166,6 @@ $(function() {
     $('.menu__links').slideToggle();
   });
 
-  //Animaciones para los numeros
-  $('.counters .counter:nth-child(1) .counter__number').animateNumber({number: 6},1200);
-  $('.counters .counter:nth-child(2) .counter__number').animateNumber({number: 15},1200);
-  $('.counters .counter:nth-child(3) .counter__number').animateNumber({number: 3},1500);
-  $('.counters .counter:nth-child(4) .counter__number').animateNumber({number: 9},1200);
-
   //cuenta regresiva
   $('#cuenta-regresiva').countdown('2020/12/10 09:00:00', function(event){
     $('#dias .counter__number').html(event.strftime('%D'));
